@@ -162,6 +162,8 @@ aside {
   width: 360px;
   box-sizing: border-box;
   position: fixed;
+  top: auto;
+
   right: 0;
 }
 
