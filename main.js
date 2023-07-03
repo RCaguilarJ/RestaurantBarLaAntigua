@@ -190,6 +190,19 @@ productList.push({
   description: "Corte T-BONE de 250gr  al termino de su elección ",
 });
 productList.push({
+  name: "Corte New York",
+  price: 187,
+  image: "logos/NewYork.jpeg",
+  description: "Corte New York  de 250gr  al termino de su elección ",
+});
+productList.push({
+  name: "Corte Rib Eye",
+  price: 187,
+  image: "logos/corteRibEye.jpeg",
+  description: "Corte Rib Eye  de 250gr  al termino de su elección ",
+});
+
+productList.push({
   name: "Corte Arrachera",
   price: 195,
   image: "logos/arrachera.jpeg",
@@ -237,6 +250,7 @@ productList.push({
   image: "logos/sabe5.jpeg",
   description: "?????",
 });
+
 const openProductInfo = (product) => {
   //muestra el aside con la info del producto seleccionado
   const aside = document.querySelector(".product-detail-main");
