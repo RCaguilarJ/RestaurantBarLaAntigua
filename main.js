@@ -180,7 +180,7 @@ productList.push({
   price: 189,
   image: "logos/piñaMar.jpeg",
   description:
-    "Piña asadarellena de pulpa, camarones y surimi, queso gratinado, salsa diabla, acompañado de arroz y ensalada  ",
+    "Piña asadare llena de pulpa, camarones y surimi, queso gratinado, salsa diabla, acompañado de arroz y ensalada  ",
 });
 
 productList.push({
