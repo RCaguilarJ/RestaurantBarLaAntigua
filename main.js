@@ -186,7 +186,7 @@ productList.push({
 productList.push({
   name: "Corte Rib Eye",
   price: 210,
-  image: "/imgSinEditar/corteRibEye.jpeg",
+  image: "logos/corteRibEye.jpeg",
   description: "Corte Rib Eye de 250gr  al termino de su elección ",
 });
 productList.push({
