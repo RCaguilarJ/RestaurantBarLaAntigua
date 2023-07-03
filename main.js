@@ -183,18 +183,18 @@ productList.push({
     "Piña asadarellena de pulpa, camarones y surimi, queso gratinado, salsa diabla, acompañado de arroz y ensalada  ",
 });
 
-productList.push({
-  name: "Corte Rib Eye",
-  price: 210,
-  image: "logos/corteRibEye.jpeg",
-  description: "Corte Rib Eye de 250gr  al termino de su elección ",
-});
-productList.push({
-  name: "Corte New York",
-  price: 215,
-  image: "/logos/NewYork.jpeg",
-  description: "Corte New York de 250gr  al termino de su elección ",
-});
+// productList.push({
+//   name: "Corte Rib Eye",
+//   price: 210,
+//   image: "logos/corteRibEye.jpeg",
+//   description: "Corte Rib Eye de 250gr  al termino de su elección ",
+// });
+// productList.push({
+//   name: "Corte New York",
+//   price: 215,
+//   image: "/logos/NewYork.jpeg",
+//   description: "Corte New York de 250gr  al termino de su elección ",
+// });
 productList.push({
   name: "Corte T-bone",
   price: 187,
