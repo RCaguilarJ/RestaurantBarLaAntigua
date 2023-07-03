@@ -102,12 +102,41 @@ function toggleMenus() {
 }
 
 const productList = [];
+
 productList.push({
-  name: "Baggle",
+  name: "Aros de cebolla",
+  price: 56,
+  image: "logos/aros.jpeg",
+  description: "Crujientes aros de cebolla",
+});
+
+// productList.push({
+//   name: "Dedos de queso ",
+//   price: 56,
+//   image: "logos/dedos.jpeg",
+//   description: "Crujientes dedos de queso",
+// });
+
+productList.push({
+  name: "Papas a la francesa",
+  price: 56,
+  image: "logos/papas.jpeg",
+  description: "Crujientes papasa la francesa",
+});
+productList.push({
+  name: "Alitas",
+  price: 110,
+  image: "logos/alitas.jpeg",
+  description:
+    "Sabores Mango habanero, búfalo, lemon pepper, dinamita, bbq, chipotle, parmesano, y cajún",
+});
+
+productList.push({
+  name: "Baggle Mar y Tierra",
   price: 120,
   image: "logos/bagleMuestra.jpeg",
   description:
-    "Pan denso y crujiente con unacubierta de queso gratinado carne arrachera, por dentro pulpa de aguacate, queso momozarella y queso crema",
+    "Pan denso y crujiente con unacubierta de queso gratinado carne arrachera y camarones, por dentro pulpa de aguacate, queso momozarella y queso crema",
 });
 
 productList.push({
@@ -144,6 +173,39 @@ productList.push({
   image: "logos/lasaña.jpeg",
   description:
     "Deliciosas laminas de pasta horneada, intercaladas con carne de res, salsa boloñesa, crema bechamel y queso gratinado ",
+});
+
+productList.push({
+  name: "Piña Mar",
+  price: 189,
+  image: "logos/piñaMar.jpeg",
+  description:
+    "Piña asadarellena de pulpa, camarones y surimi, queso gratinado, salsa diabla, acompañado de arroz y ensalada  ",
+});
+
+productList.push({
+  name: "Corte Rib Eye",
+  price: 210,
+  image: "/imgSinEditar/corteRibEye.jpeg",
+  description: "Corte Rib Eye de 250gr  al termino de su elección ",
+});
+productList.push({
+  name: "Corte New York",
+  price: 215,
+  image: "/logos/NewYork.jpeg",
+  description: "Corte New York de 250gr  al termino de su elección ",
+});
+productList.push({
+  name: "Corte T-bone",
+  price: 187,
+  image: "logos/cortes-para-asar-t-bone.jpg",
+  description: "Corte T-BONE de 250gr  al termino de su elección ",
+});
+productList.push({
+  name: "Corte Arrachera",
+  price: 195,
+  image: "logos/arrachera.jpeg",
+  description: "Corte arrachera de 250gr  al termino de su elección ",
 });
 
 const openProductInfo = (product) => {
