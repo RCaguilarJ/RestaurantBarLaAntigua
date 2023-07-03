@@ -207,7 +207,48 @@ productList.push({
   image: "logos/arrachera.jpeg",
   description: "Corte arrachera de 250gr  al termino de su elección ",
 });
-
+productList.push({
+  name: "?",
+  price: 195,
+  image: "logos/crokemadam.jpeg",
+  description: "?",
+});
+productList.push({
+  name: "??",
+  price: 195,
+  image: "logos/huevos.jpeg",
+  description: "??",
+});
+productList.push({
+  name: "???",
+  price: 195,
+  image: "logos/sabe1.jpeg",
+  description: "???",
+});
+productList.push({
+  name: "????",
+  price: 195,
+  image: "logos/sabe2.jpeg",
+  description: "????",
+});
+productList.push({
+  name: "?????",
+  price: 195,
+  image: "logos/sabe3.jpeg",
+  description: "?????",
+});
+productList.push({
+  name: "?????",
+  price: 195,
+  image: "logos/sabe4.jpeg",
+  description: "?????",
+});
+productList.push({
+  name: "?????",
+  price: 195,
+  image: "logos/sabe5.jpeg",
+  description: "?????",
+});
 const openProductInfo = (product) => {
   //muestra el aside con la info del producto seleccionado
   const aside = document.querySelector(".product-detail-main");
