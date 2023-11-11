@@ -7,10 +7,6 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const shoppingCartContainer = document.querySelector("#shoppingCartContainer");
 const productDetailContainer = document.querySelector("#productDetail");
 const cardsContainer = document.querySelector(".cards-container");
-const imagen = document.querySelector("#infoImages");
-const priceProduct = document.querySelector("#price");
-
-//const mediaQuery = window.matchMedia("(max-width: 640px)");
 
 navEmail.addEventListener("click", toggleDesktopMenu);
 menuHamIcon.addEventListener("click", toggleMobileMenu);
@@ -31,17 +27,13 @@ function toggleDesktopMenu() {
   if (!isproductDetailContainer) {
     productDetailContainer.classList.add("inactive");
   }
-  // //     // if(!desktopMenu.classList.toggle("inactive")){
-  // //     //     desktopMenu.classList.remove("inactive");
-  // //     //  }else{
-  // //     //     desktopMenu.classList.add("inactive");
-  // //     //  }
 }
 
 function toggleMobileMenu() {
   const isAsideClose = shoppingCartContainer.classList.contains("inactive");
 
-  mobileMenu.classList.toggle("inactive"); //Si esta lo elimina, si no esta lo activa
+  mobileMenu.classList.toggle("inactive");
+
   if (!isAsideClose) {
     shoppingCartContainer.classList.add("inactive");
   }
@@ -50,14 +42,13 @@ function toggleMobileMenu() {
 
 function toggleCarritoAside() {
   const isMobileMenuClose = mobileMenu.classList.contains("inactive");
-  const isDesktopMenuClose = desktopMenu.classList.contains("inactive"); // El elemento contiene la clase inactive = true (cerrado)
-  // El elemento no contiene la clase inactive = falso (abierto)
+  const isDesktopMenuClose = desktopMenu.classList.contains("inactive");
   const isProductDetailClose =
     productDetailContainer.classList.contains("inactive");
 
   shoppingCartContainer.classList.toggle("inactive");
+
   if (!isMobileMenuClose) {
-    // si esta abierto
     mobileMenu.classList.add("inactive");
   }
 
@@ -71,15 +62,13 @@ function toggleCarritoAside() {
 }
 
 function openProductDetailAside(event, product) {
-  // let productDetailContainer = docment.querySelector(`#productDetail`);
-  console.log(event.target.src);
   document
     .querySelector("#productDetail-image")
     .setAttribute("src", event.target.src);
   document.querySelector("#productDetail-name").innerHTML = product.name;
-
-  document.querySelector("#productDetail-price").innerHTML = product.price;
-
+  document.querySelector(
+    "#productDetail-price"
+  ).innerHTML = `$${product.price}`;
   document.querySelector("#productDetail-description").innerHTML =
     product.description;
 
@@ -91,14 +80,6 @@ function openProductDetailAside(event, product) {
 
 function closeProductDetailAside() {
   productDetailContainer.classList.add("inactive");
-}
-
-function toggleMenus() {
-  if (mediaQuery.matches) {
-    mobileMenu.classList.toggle("inactive");
-  } else {
-    desktopMenu.classList.toggle("inactive");
-  }
 }
 
 const productList = [];
@@ -251,18 +232,6 @@ productList.push({
   description: "?????",
 });
 
-const openProductInfo = (product) => {
-  //muestra el aside con la info del producto seleccionado
-  const aside = document.querySelector(".product-detail-main");
-  const productImg = document.querySelector(".product-detail-main-img");
-  const productPrice = document.querySelector(".product-info .product-price");
-  const productName = document.querySelector(".product-info .product-name");
-  aside.classList.remove("inactive");
-  productImg.setAttribute("src", product.img);
-  productPrice.textContent = product.price;
-  productName.textContent = product.name;
-};
-
 function renderProducts(arr) {
   for (let index = 0; index < arr.length; index++) {
     let product = arr[index];
@@ -270,10 +239,8 @@ function renderProducts(arr) {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
 
-    //product = {name, price, image} -> product.image
     const productImg = document.createElement("img");
     productImg.setAttribute("src", product.image);
-    productImg.setAttribute("id", "imagen");
     productImg.addEventListener("click", (e) => {
       openProductDetailAside(e, product);
     });
@@ -292,20 +259,14 @@ function renderProducts(arr) {
     productInfoDiv.appendChild(productInfoPrice);
     productInfoDiv.appendChild(productInfoName);
 
-    const productInfofigure = document.createElement("figure");
-
-    const productImgCart = document.createElement("img");
-    productImgCart.setAttribute("src", "./icons/bt_add_to_cart.svg");
-
-    productInfofigure.appendChild(productImgCart);
-
     productInfo.appendChild(productInfoDiv);
-    productInfo.appendChild(productInfofigure);
 
     productCard.appendChild(productImg);
     productCard.appendChild(productInfo);
 
+    // Agregamos la tarjeta del producto al contenedor solo con imagen e información
     cardsContainer.appendChild(productCard);
   }
 }
+
 renderProducts(productList);
