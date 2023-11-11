@@ -241,7 +241,7 @@ aside {
 
 /* ProductDetail */
 .product-detail-close {
-  background: black;
+  background: gray;
   width: 14px;
   height: 14px;
   position: absolute;
